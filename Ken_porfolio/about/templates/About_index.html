@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<br>
+<br>
+<br>
+<div class="row">
+    {% for About in about %}
+    <div class="col-md-4">
+        <h5>Role:</h5>
+        <p>{{ About.role}}</p>
+        <br>
+        <h5>About me:</h5>
+        <p>{{ About.descriptions }}</p>
+        <br>
+        <h5>Skills:</h5>
+        <p>{{ About.tech }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
